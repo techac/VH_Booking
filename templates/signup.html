@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>SignUp</title>
+
+    </head>
+    <body>
+        <h1>Signup</h1>
+        <form action="/accounts/signup/" class="site-form" method="post">
+            {{form.as_p}}
+            {%  csrf_token %}
+            <button type = "submit" value = "Login" >
+                  <strong>Login</strong>
+               </button>
+        </form>
+    </body>
+</html>
