@@ -25,4 +25,4 @@ class myregistrationform(UserCreationForm):
 class PostForm(forms.ModelForm):
     class Meta:
         model=Post
-        fields={'name','check_in','check_out','date'}
+        fields={'name','check_in','check_out','date','date_joined'}
