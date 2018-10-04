@@ -1,2 +1,2 @@
-django ==1.11
-mardown ==0.2.0
+django==1.11
+pytz==2018.5
