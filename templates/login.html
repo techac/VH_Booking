@@ -1,16 +1,12 @@
-<html>
-    <head>
-        <title>LogIn</title>
-
-    </head>
-    <body>
-        <h1>LogIn</h1>
-        <form action="/accounts/login/" class="site-form" method="post">
-            {{form}}
-            {%  csrf_token %}
-            <button type = "submit" value = "Login" >
-                  <strong>Login</strong>
-               </button>
-        </form>
-    </body>
-</html>
+{% extends "base.html" %}
+{% block title %}Portal login{% endblock  %}
+{% block content %}
+    <h1>Log in</h1>
+    <form action="/accounts/login/" class="site-form" method="post">
+        {{form}}
+        {% csrf_token %}
+        <button type="submit" value="Login">
+            <strong>Log in</strong>
+        </button>
+    </form>
+{% endblock  %}
