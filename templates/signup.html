@@ -1,16 +1,12 @@
-<html>
-    <head>
-        <title>SignUp</title>
-
-    </head>
-    <body>
-        <h1>Signup</h1>
-        <form action="/accounts/signup/" class="site-form" method="post">
-            {{form.as_p}}
-            {%  csrf_token %}
-            <button type = "submit" value = "Login" >
-                  <strong>Login</strong>
-               </button>
-        </form>
-    </body>
-</html>
+{% extends "base.html" %}
+{% block title %}Sign up{% endblock  %}
+{% block content %}
+    <h1>Sign up</h1>
+    <form action="/accounts/signup/" class="site-form" method="post">
+        {{form.as_p}}
+        {% csrf_token %}
+        <button type="submit" value="Login">
+            <strong>Login</strong>
+        </button>
+    </form>
+{% endblock %}

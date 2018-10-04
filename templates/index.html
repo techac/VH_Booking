@@ -1,19 +1,14 @@
-<html>
-    <head>
-        <title>
-            HEllo
-        </title>
-    </head>
-    <body>
-        HEllo you are registred
-        <form action="/accounts/logout/" method="post">
+{% extends "base.html" %}
+{% block title %}Greetings!{% endblock  %}
+{% block content %}
+    <p>Hello, you are already registered</p>
+    <form action="/accounts/logout/" method="post">
         {%csrf_token%}
-        <button type="submit">LOGOUT</button>
-        </form>
-        <form action="/index/" method="post">
-            {%csrf_token%}
-            {{form.as_p}}
-            <button type="submit" >Submit</button>
-        </form>
-    </body>
-</html>
+        <button type="submit">Logout</button>
+    </form>
+    <form action="/index/" method="post">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock  %}

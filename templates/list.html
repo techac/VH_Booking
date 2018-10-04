@@ -1,18 +1,13 @@
-<html>
-    <head>
-        <title>
-            Requests
-        </title>
-    </head>
-    <body>
-        {%for obj in object_set%}
-        {{obj.name}}<p> </p>
-        <p>
-            <button type="submit">Approve</button>
-            <button type="submit">Decline</button>
-        </p>
-        <br><br><br>
+{% extends "base.html" %}
+{% block title %}Requests{% endblock  %}
+{% block content %}
+    {%for obj in object_set%}
+    {{obj.name}}<p> </p>
+    <p>
+        <button type="submit">Approve</button>
+        <button type="submit">Decline</button>
+    </p>
+    <br><br><br>
 
-        {%endfor%}
-    </body>
-</html>
+    {%endfor%}
+{% endblock  %}
